@@ -24,5 +24,9 @@ class ArticlesController < ApplicationController
     get 'articles/:id/edit', to: 'articles#edit', as: :edit_article
   end
 
+def update
+  patch 'articles/:id', to: 'articles#update'
+
+
 
 end
