@@ -46,6 +46,6 @@ def update
  @article.update(title: params[:article][:title], description: params[:article][:description])
  redirect_to article_path(@article)
 end
-
+# Now if you go to the edit page and make changes to the title or description form elements, you will see they are changed when the form is submitted.
 
 end
