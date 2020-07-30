@@ -24,7 +24,6 @@ class ArticlesController < ApplicationController
 # route: get 'articles/:id/edit', to: 'articles#edit', as: :edit_article
 # Since @article is not a new instance of Article, the inputs on this form, the text field and text area, will be populated with the corresponding object values.
 
-
   def edit
     @article = Article.find(params[:id])
   end
