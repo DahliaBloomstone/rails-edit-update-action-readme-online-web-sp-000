@@ -35,8 +35,7 @@ class ArticlesController < ApplicationController
 # route: patch 'articles/:id', to: 'articles#update'
 
 def update
-  raise params.inspect #
-The raise method will cause the application to pause and print out the params on an error page. 
+  raise params.inspect #The raise method will cause the application to pause and print out the params on an error page
 
 end
 
