@@ -20,13 +20,14 @@ class ArticlesController < ApplicationController
   end
 
   # add edit and update methods here
+  # . Since the form will need to know which record is being edited, this will need to be a dynamic route that accepts an :id as a parameter that the controller can access:
   def edit
     get 'articles/:id/edit', to: 'articles#edit', as: :edit_article
   end
 
 def update
   patch 'articles/:id', to: 'articles#update'
-end 
+end
 
 
 end
