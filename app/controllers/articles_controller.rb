@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
 
 def update
   patch 'articles/:id', to: 'articles#update'
-
+end 
 
 
 end
