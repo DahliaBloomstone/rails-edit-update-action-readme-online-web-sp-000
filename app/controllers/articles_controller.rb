@@ -38,10 +38,13 @@ class ArticlesController < ApplicationController
 # store query in instance varaible
 # update values passed from form The update method takes a hash of the attributes for the model as its argument, e.g. `Article.find(1).update(title: "I'm Changed", description: "And here too!")
 # save changes in the database
-# redirect the user to the show page 
-def update
-  raise params.inspect #The raise method will cause the application to pause and print out the params on an error page
+# redirect the user to the show page
 
+def update
+# raise params.inspect The raise method will cause the application to pause and print out the params on an error page
+@article = Article.find(params[:id])
+ @article.update(title: params[:article][:title], description: params[:article][:description])
+ redirect_to article_path(@article)
 end
 
 
