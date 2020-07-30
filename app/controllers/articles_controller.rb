@@ -23,7 +23,6 @@ class ArticlesController < ApplicationController
 # Since the form will need to know which record is being edited, this will need to be a dynamic route that accepts an :id as a parameter that the controller can access:
 # route: get 'articles/:id/edit', to: 'articles#edit', as: :edit_article
 # Since @article is not a new instance of Article, the inputs on this form, the text field and text area, will be populated with the corresponding object values.
-
   def edit
     @article = Article.find(params[:id])
   end
@@ -37,7 +36,6 @@ class ArticlesController < ApplicationController
 # update values passed from form The update method takes a hash of the attributes for the model as its argument, e.g. `Article.find(1).update(title: "I'm Changed", description: "And here too!")
 # save changes in the database
 # redirect the user to the show page
-
 def update
 # raise params.inspect The raise method will cause the application to pause and print out the params on an error page
 @article = Article.find(params[:id])
