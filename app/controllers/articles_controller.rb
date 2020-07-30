@@ -28,8 +28,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-
-
 # This second route will also need to be dynamic, accepting the same :id as a parameter so that the action will know which record is being altered.
 # PATCH: we're sending data to the server
 # route: patch 'articles/:id', to: 'articles#update'
