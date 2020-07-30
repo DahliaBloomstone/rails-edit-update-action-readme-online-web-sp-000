@@ -33,7 +33,12 @@ class ArticlesController < ApplicationController
 # This second route will also need to be dynamic, accepting the same :id as a parameter so that the action will know which record is being altered.
 # PATCH: we're sending data to the server
 # route: patch 'articles/:id', to: 'articles#update'
-
+# update action:
+# query database for Article record that matches :id passed to route
+# store query in instance varaible
+# update values passed from form The update method takes a hash of the attributes for the model as its argument, e.g. `Article.find(1).update(title: "I'm Changed", description: "And here too!")
+# save changes in the database
+# redirect the user to the show page 
 def update
   raise params.inspect #The raise method will cause the application to pause and print out the params on an error page
 
